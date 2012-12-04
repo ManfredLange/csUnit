@@ -1,0 +1,16 @@
+/csUnit/obj
+/csUnit.Common/obj
+/csUnit.Common/csUnit.Common.Tests/obj
+/csUnit/csUnitTest/obj
+/csUnit.Core/csUnit.Core.Tests/obj
+/csUnit.Core/obj
+/csUnit.Core.Visitors/obj
+/csUnit.Interfaces/csUnit.Interfaces.Tests/obj
+/csUnit.Interfaces/obj
+/csUnit.Ui.Controls/obj
+/csUnit.Ui.Controls/csUnit.Ui.Controls.Tests/obj
+/csUnitCmd/csUnitCmdTest/obj
+/csUnitCmd/obj
+/csUnitRunner/obj
+/*.suo
+/build/Debug

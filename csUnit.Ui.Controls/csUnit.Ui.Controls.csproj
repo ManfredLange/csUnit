@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBC204BC-5647-4DB2-B629-51C85DD9405E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>csUnit.Ui.Controls</AssemblyName>
+    <AssemblyOriginatorKeyFile>csUnit.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>csUnit.Ui.Controls</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\csUnit.Common\csUnit.Common.csproj">
+      <Project>{B2CFAD93-ECED-48DE-A1C9-041AE50EAD1A}</Project>
+      <Name>csUnit.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit.Core\csUnit.Core.csproj">
+      <Project>{AD191D69-9323-47E4-8BFA-397601AA241E}</Project>
+      <Name>csUnit.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit.Interfaces\csUnit.Interfaces.csproj">
+      <Name>csUnit.Interfaces</Name>
+      <Project>{FED66A86-7FE7-49DA-B82A-B29F3683720E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit\csUnit.csproj">
+      <Project>{CA0EC72A-53A9-4B6A-B79B-E5E45C2DEC71}</Project>
+      <Name>csUnit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\ShowFindPanelCommand.cs" />
+    <Compile Include="Commands\TestRunThisCommand.cs" />
+    <Compile Include="HitTestResult.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SmartTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SmartTree.Designer.cs">
+      <DependentUpon>SmartTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartTreeEventHandlerArgs.cs" />
+    <Compile Include="SmartTreeNode.cs">
+    </Compile>
+    <Compile Include="SmartTreeNodeCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ICommandTarget.cs" />
+    <Compile Include="Commands\TestAbortCommand.cs" />
+    <Compile Include="Commands\TestRunAllCommand.cs" />
+    <Compile Include="Commands\TestRunCheckedCommand.cs" />
+    <Compile Include="Commands\TestRunFailedCommand.cs" />
+    <Compile Include="ConfigCurrentUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConsoleWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="csUnitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="csUnitControl.Designer.cs">
+      <DependentUpon>csUnitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsUnitControlEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomProfessionalColors.cs" />
+    <Compile Include="EnumerableWrapper.cs" />
+    <Compile Include="ITestSelectionFilterProvider.cs" />
+    <Compile Include="ITestSelectionProvider.cs" />
+    <Compile Include="ProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\ConsoleOutputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\ConsoleOutputControl.Designer.cs">
+      <DependentUpon>ConsoleOutputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\ContentControlEventArgs.cs" />
+    <Compile Include="TabPages\FindLocation.cs" />
+    <Compile Include="TabPages\IContentControl.cs" />
+    <Compile Include="TabPages\SimpleTestListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\SimpleTestListControl.Designer.cs">
+      <DependentUpon>SimpleTestListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\StatisticsListSorter.cs" />
+    <Compile Include="TabPages\TestHierarchyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\TestHierarchyControl.Designer.cs">
+      <DependentUpon>TestHierarchyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\TestHierarchyControl2.cs">
+    </Compile>
+    <Compile Include="TabPages\TestHierarchyControl2.Designer.cs">
+      <DependentUpon>TestHierarchyControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\TestStatisticsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\TestStatisticsControl.Designer.cs">
+      <DependentUpon>TestStatisticsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestTreeNode.cs" />
+    <Compile Include="TestTreeView.cs">
+    </Compile>
+    <Compile Include="TestTreeView.Designer.cs">
+      <DependentUpon>TestTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIElementInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UiElementInfoCollection.cs" />
+    <EmbeddedResource Include="csUnitControl.resx">
+      <DependentUpon>csUnitControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\CategoryControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\ConsoleOutputControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConsoleOutputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\SimpleTestListControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SimpleTestListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TestHierarchyControl2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestHierarchyControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TestStatisticsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestStatisticsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="csUnit.snk" />
+    <None Include="postbuild.bat" />
+    <None Include="Properties\DataSources\csUnit.Core.TestMethodInfo.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Commands\Images\TestAbortCommand.png" />
+    <EmbeddedResource Include="Commands\Images\TestRunAllCommand.png" />
+    <EmbeddedResource Include="Commands\Images\TestRunCheckedCommand.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartTree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SmartTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\TestHierarchyControl.resx">
+      <DependentUpon>TestHierarchyControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Resources\CallStack.bmp" />
+    <Content Include="Resources\GoLtrHS.png" />
+    <EmbeddedResource Include="Commands\Images\TestRunThisCommand.png" />
+    <Content Include="Resources\ClearSearch.png" />
+    <Content Include="Resources\FindHS.png" />
+    <Content Include="Resources\Minus.png" />
+    <Content Include="Resources\Plus.png" />
+    <Content Include="TabPages\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>call "$(ProjectDir)PostBuild.bat" "$(TargetName)" "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

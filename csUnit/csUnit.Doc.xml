@@ -1,0 +1,1399 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>csUnit</name>
+    </assembly>
+    <members>
+        <member name="T:csUnit.Assert">
+            <summary>
+            The Assert class is used in test methods to assert a known
+            condition.  For instance, after running some logic, to assert
+            that a result variable has an expected value, use the <code>Assert.Equals</code>
+            method.
+            </summary>
+            <example>
+            [TestFixture]
+            public class MyTest {
+              public MyTest() {
+              }
+              [Test]
+              public void FirstTest() {
+                int result = RunSomeMethod();
+                // Make sure the result is 25
+                Assert.Equals(25, result, "The result should have been 25");
+              }
+            }
+            </example>
+        </member>
+        <member name="M:csUnit.Assert.AreInstancesOfType``1(System.Type,System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Asserts that all elements of a collection are instances of an expected
+            type. If an element is of a type that is derived from the expected 
+            type, the test will pass.
+            </summary>
+            <typeparam name="T">Type of the collection.</typeparam>
+            <param name="expectedType">Expected type of all elements in the collection.</param>
+            <param name="collection">Collection to test.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains(System.String,System.String[],System.String)">
+            <summary>
+            Assert that a string is member of a string array. The search is
+            case sensitive.
+            </summary>
+            <param name="expected">String to look for.</param>
+            <param name="strings">Array of strings</param>
+            <param name="message">Message to display if 'expected' is not in array.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains(System.String,System.String[])">
+            <summary>
+            Assert that a string is member of a string array. The search is
+            case sensitive.
+            </summary>
+            <param name="expected">String to look for.</param>
+            <param name="strings">Array of strings</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains(System.String,System.String,System.String)">
+            <summary>
+            Assert that a string is a substring of a different string. The search
+            is case sensitive.
+            </summary>
+            <param name="expected">The expected string.</param>
+            <param name="toBeSearched">The string to search.</param>
+            <param name="message">Message to display when 'expected' is not found 
+            in 'toBeSearched'.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains(System.String,System.String)">
+            <summary>
+            Assert that a string is a substring of a different string. The search
+            is case sensitive.
+            </summary>
+            <param name="expected">The expected string.</param>
+            <param name="toBeSearched">The string to search.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains``1(``0,System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Asserts that an element of type T is contained in a set.
+            </summary>
+            <typeparam name="T">The type of the elements.</typeparam>
+            <param name="expected">The element to search for.</param>
+            <param name="toBeSearched">The set in which to search.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains``1(``0,System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            Asserts that an element of type T is contained in a set.
+            </summary>
+            <typeparam name="T">Type of the elements.</typeparam>
+            <param name="expected">Element to search for.</param>
+            <param name="toBeSearched">Set to search in.</param>
+            <param name="customMessage">Message to be displayed, if the element is
+            not found.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains``1(``0,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Asserts that an element of type T is contained in the enumerable object.
+            This operation can be expensive on larger containers since the search
+            is performed linearly.
+            </summary>
+            <typeparam name="T">Type of the elements.</typeparam>
+            <param name="expected">Element to search for.</param>
+            <param name="toBeSearched">Enumerable object to search in.</param>
+        </member>
+        <member name="M:csUnit.Assert.Contains``1(``0,System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Asserts that an element of type T is contained in the enumerable object.
+            This operation can be expensive on larger containers since the search
+            is performed linearly.
+            </summary>
+            <typeparam name="T">Type of the elements.</typeparam>
+            <param name="expected">Element to search for.</param>
+            <param name="toBeSearched">Enumerable object to search in.</param>
+            <param name="customMessage">Message to be displayed if assertion fails.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Object,System.Object,System.String)">
+            <summary>
+            Assert two objects are equal.
+            </summary>
+            <param name="expected">The expected value, either literal or object.</param>
+            <param name="actual">The actual value, typically a variable.</param>
+            <param name="message">Message to be displayed, when not equal.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Int64,System.Int64)">
+            <summary>
+            Assert the equality of two long primitives and emit the
+            default message when they are not equal.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Int64,System.Int64,System.String)">
+            <summary>
+            Assert the equality of two long primitive types and issues a
+            custom message if it is not String.Empty
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+            <param name="message">The optional message to emit</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Int32,System.Int32)">
+            <summary>
+            Assert the equality of two integer primitives and emit the
+            default message when they are not equal.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Int32,System.Int32,System.String)">
+            <summary>
+            Assert the equality of two integer primitive types and issues a
+            custom message if it is not String.Empty
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+            <param name="message">The optional message to emit</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Int16,System.Int16)">
+            <summary>
+            Assert the equality of two short primitives and emit the
+            default message when they are not equal.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Int16,System.Int16,System.String)">
+            <summary>
+            Assert the equality of two short primitive types and issues a
+            custom message if it is not String.Empty
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+            <param name="message">The optional message to emit</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Object,System.Object)">
+            <summary>
+            Assert two objects are equal.
+            </summary>
+            <param name="expected">The expected value, either literal or object.</param>
+            <param name="actual">The actual value, typically a variable.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Object[],System.Object[])">
+            <summary>
+            Assert that two arrays are equal. The instances can be different. 
+            This assertions verifies that the content of both is the same.
+            </summary>
+            <param name="expected">Expected array.</param>
+            <param name="actual">Actual array.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Double,System.Double)">
+            <summary>
+            Asserts that two doubles are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <remarks>For numerical operations it is in many cases necessary to 
+            allow for a delta. If this is what you want, then please use one of 
+            the overloads that take a permitted delta as the
+            third parameter.</remarks>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Double,System.Double,System.String)">
+            <summary>
+            Asserts that two doubles are equal. Overload with custom message.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="customMessage">Message to dispay if assertion fails.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Asserts that the difference between two doubles is not larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected double value.</param>
+            <param name="actual">The actual double value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+            <param name="message">Message to display if delta is larger than
+            the permitted value.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Double,System.Double,System.Double)">
+            <summary>
+            Asserts that the difference between two doubles is not larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected double value.</param>
+            <param name="actual">The actual double value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Asserts that the difference between two Singles is not larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected Single value.</param>
+            <param name="actual">The actual Single value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+            <param name="message">Message to display if delta is larger than
+            the permitted value.</param>
+        </member>
+        <member name="M:csUnit.Assert.Equals(System.Single,System.Single,System.Single)">
+            <summary>
+            Asserts that the difference between two Singles is not larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected Single value.</param>
+            <param name="actual">The actual Single value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+        </member>
+        <member name="M:csUnit.Assert.EqualsRegex(System.String,System.String)">
+            <summary>
+            Compares the given string (actual) against the regular expression.
+            If the expression does not match on the string, then an assertion is
+            raised.
+            </summary>
+            <param name="actual">The string on which to test the expression</param>
+            <param name="expression">The regular expression to test</param>
+            <example>
+            Assert.EqualsRegEx("thisismyname1234", "[a-zA-Z]+[0-9]*")
+            </example>
+        </member>
+        <member name="M:csUnit.Assert.EqualsRegex(System.String,System.String,System.String)">
+            <summary>
+            Compares the given string (actual) against the regular expression.
+            If the expression does not match on the string, then an assertion is
+            raised.
+            </summary>
+            <param name="actual">The string on which to test the expression</param>
+            <param name="expression">The regular expression to test</param>
+            <param name="message">The user message</param>
+            <example>
+            Assert.EqualsRegEx("thisismyname1234", "[a-zA-Z]+[0-9]*", "Wrong Format")
+            </example>
+        </member>
+        <member name="M:csUnit.Assert.False(System.Boolean,System.String)">
+            <summary>
+            Verify whether expression is 'false'.
+            </summary>
+            <param name="expression">Boolean expression checked to be 'false'.</param>
+            <param name="message">Message to be displayed, when expression is 'true'.</param>
+        </member>
+        <member name="M:csUnit.Assert.False(System.Boolean)">
+            <summary>
+            Verify whether expression is 'false'.
+            </summary>
+            <param name="expression">Boolean expression checked to be 'false'.</param>
+        </member>
+        <member name="M:csUnit.Assert.Fail">
+            <summary>
+            Calling this method fails a test. Generally it shouldn't be needed
+            in your code.
+            </summary>
+        </member>
+        <member name="M:csUnit.Assert.Fail(System.String)">
+            <summary>
+            Calling this method fails a test. Generally it shouldn't be needed
+            in your code.
+            </summary>
+            <param name="message">Custom string message.</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.IComparable,System.IComparable,System.String)">
+            <summary>
+            Asserts that an object is greater than a different object. Both 
+            objects must be of the same type, and that type must implement the
+            System.IComparable interface.
+            </summary>
+            <param name="expectedGreater">The object expected to be greater.</param>
+            <param name="expectedLess">The object expected to be less.</param>
+            <param name="message">Message to be displayed when obj1 is not greater
+             than obj2</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.IComparable,System.IComparable)">
+            <summary>
+            Asserts that an object is greater than a different object. Both 
+            objects must be of the same type, and that type must implement the
+            System.IComparable interface.
+            </summary>
+            <param name="expectedGreater">The object expected to be greater.</param>
+            <param name="expectedLess">The object expected to be less.</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Int32,System.Int32)">
+            <summary>
+            Asserts the first value is greater than the second value.
+            </summary>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Int32,System.Int32,System.String)">
+            <summary>
+            Asserts the first value is greater than the second value.
+            </summary>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Int16,System.Int16)">
+            <summary>
+            Asserts the first value is greater than the second value.
+            </summary>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Int16,System.Int16,System.String)">
+            <summary>
+            Asserts the first value is greater than the second value.
+            </summary>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Int64,System.Int64)">
+            <summary>
+            Asserts the first value is greater than the second value.
+            </summary>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Int64,System.Int64,System.String)">
+            <summary>
+            Asserts the first value is greater than the second value.
+            </summary>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Double,System.Double,System.Double)">
+            <summary>
+            Asserts the first value is greater than the second value, within a specified
+            tolerance.
+            </summary>
+            <remarks>The interpretation would be one of the two:
+            <list type=""><item>Actual &lt; (Expected ± permittedDelta)</item></list>
+            <list type=""><item>Expected &gt; (Actual ± permittedDelta)</item></list>
+            </remarks>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="permittedDelta">The equality tolerance</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Asserts the first value is greater than the second value, within a specified
+            tolerance.
+            </summary>
+            <remarks>The interpretation would be one of the two:
+            <list type=""><item>Actual &lt; (Expected ± permittedDelta)</item></list>
+            <list type=""><item>Expected &gt; (Actual ± permittedDelta)</item></list>
+            </remarks>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="permittedDelta">The equality tolerance</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Single,System.Single,System.Single)">
+            <summary>
+            Asserts the first value is greater than the second value, within a specified
+            tolerance.
+            </summary>
+            <remarks>The interpretation would be one of the two:
+            <list type=""><item>Actual &lt; (Expected ± permittedDelta)</item></list>
+            <list type=""><item>Expected &gt; (Actual ± permittedDelta)</item></list>
+            </remarks>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="permittedDelta">The equality tolerance</param>
+        </member>
+        <member name="M:csUnit.Assert.Greater(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Asserts the first value is greater than the second value, within a specified
+            tolerance.
+            </summary>
+            <remarks>The interpretation would be one of the two:
+            <list type=""><item>Actual &lt; (Expected ± permittedDelta)</item></list>
+            <list type=""><item>Expected &gt; (Actual ± permittedDelta)</item></list>
+            </remarks>
+            <param name="expectedGreater">The left-hand side of the inequality.</param>
+            <param name="expectedLess">The right-hand side of the inequality.</param>
+            <param name="permittedDelta">The equality tolerance.</param>
+            <param name="message">An optional message to display with the default message.</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.IComparable,System.IComparable,System.String)">
+            <summary>
+            Asserts that an object is less than a different object. Both objects
+            must be of the same type, and that type must implement the
+            System.IComparable interface.
+            </summary>
+            <param name="expectedLess">The object expected to be less.</param>
+            <param name="expectedGreater">The object expected to be greater.</param>
+            <param name="message">Message to be displayed when obj1 is no less.</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.IComparable,System.IComparable)">
+            <summary>
+            Asserts that an object is less than a different object. Both objects
+            must be of the same type, and that type must implement the
+            System.IComparable interface.
+            </summary>
+            <param name="expectedLess">The object expected to be less.</param>
+            <param name="expectedGreater">The object expected to be greater.</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Int32,System.Int32)">
+            <summary>
+            Asserts the first value is less than the second value.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Int32,System.Int32,System.String)">
+            <summary>
+            Asserts the first value is less than the second value.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Int16,System.Int16)">
+            <summary>
+            Asserts the first value is less than the second value.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Int16,System.Int16,System.String)">
+            <summary>
+            Asserts the first value is less than the second value.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Int64,System.Int64)">
+            <summary>
+            Asserts the first value is less than the second value.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Int64,System.Int64,System.String)">
+            <summary>
+            Asserts the first value is less than the second value.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Double,System.Double,System.Double)">
+            <summary>
+            Asserts the first value is less than the second value, within a specified
+            tolerance.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="permittedDelta">The equality tolerance</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Asserts the first value is less than the second value, within a specified
+            tolerance.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="permittedDelta">The equality tolerance</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Single,System.Single,System.Single)">
+            <summary>
+            Asserts the first value is less than the second value, within a specified
+            tolerance.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="permittedDelta">The equality tolerance</param>
+        </member>
+        <member name="M:csUnit.Assert.Less(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Asserts the first value is less than the second value, within a specified
+            tolerance.
+            </summary>
+            <param name="expectedLess">The left-hand side of the inequality</param>
+            <param name="expectedGreater">The right-hand side of the inequality</param>
+            <param name="permittedDelta">The equality tolerance</param>
+            <param name="message">An optional message to display with the default message</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Object,System.Object,System.String)">
+            <summary>
+            Assert two objects are NOT equal.
+            </summary>
+            <param name="obj1">An object to compare with.</param>
+            <param name="obj2">Another object which is compared to the first.</param>
+            <param name="message">Message to be display when objects are equal.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Object,System.Object)">
+            <summary>
+            Assert two objects are NOT equal.
+            </summary>
+            <param name="obj1">An object to compare with.</param>
+            <param name="obj2">Another object which is compared to the first.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Int64,System.Int64)">
+            <summary>
+            Assert the inequality of two long primitives and emit the
+            default message when they are equal.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Int64,System.Int64,System.String)">
+            <summary>
+            Assert the equality of two long primitive types and issues a
+            custom message if it is not String.Empty
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+            <param name="message">The optional message to emit</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Int32,System.Int32)">
+            <summary>
+            Assert the inequality of two integer primitives and emit the
+            default message when they are equal.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Int32,System.Int32,System.String)">
+            <summary>
+            Assert the inequality of two integer primitive types and emits a
+            custom message if it is not String.Empty
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+            <param name="message">The optional message to emit</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Int16,System.Int16)">
+            <summary>
+            Assert the inequality of two short primitives and emit the
+            default message when they are equal.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Int16,System.Int16,System.String)">
+            <summary>
+            Assert the inequality of two integer primitive types and emits a
+            custom message if it is not String.Empty
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="actual">The actual value</param>
+            <param name="message">The optional message to emit</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Asserts that the difference between two doubles is larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected double value.</param>
+            <param name="actual">The actual double value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+            <param name="message">Message to display if delta is not larger than
+            the permitted value.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Double,System.Double,System.Double)">
+            <summary>
+            Asserts that the difference between two doubles is larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected double value.</param>
+            <param name="actual">The actual double value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Asserts that the difference between two Singles is larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected Single value.</param>
+            <param name="actual">The actual Single value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+            <param name="message">Message to display if delta is not larger than
+            the permitted value.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEquals(System.Single,System.Single,System.Single)">
+            <summary>
+            Asserts that the difference between two Singles is larger than a
+            permitted delta.
+            </summary>
+            <param name="expected">The expected Single value.</param>
+            <param name="actual">The actual Single value.</param>
+            <param name="permittedDelta">The permitted delta between the two.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotEqualsRegex(System.String,System.String)">
+            <summary>
+            Compares the given string (actual) against the regular expression.
+            If the expression does match on the string, then an assertion is
+            raised.
+            </summary>
+            <param name="actual">The string on which to test the expression</param>
+            <param name="expression">The regular expression to test</param>
+            <example>
+            Assert.Equals("thisismyname1234", "[a-zA-Z]+[0-9]*")
+            </example>
+        </member>
+        <member name="M:csUnit.Assert.NotEqualsRegex(System.String,System.String,System.String)">
+            <summary>
+            Compares the given string (actual) against the regular expression.
+            If the expression does match on the string, then an assertion is
+            raised.
+            </summary>
+            <param name="actual">The string on which to test the expression</param>
+            <param name="expression">The regular expression to test</param>
+            <param name="message">The user message</param>
+            <example>
+            Assert.Equals("thisismyname1234", "[a-zA-Z]+[0-9]*")
+            </example>
+        </member>
+        <member name="M:csUnit.Assert.Null(System.Object,System.String)">
+            <summary>
+            Assert a reference is 'null'.
+            </summary>
+            <param name="obj">The object reference to be checked.</param>
+            <param name="message">Message to be displayed when obj is not null.</param>
+        </member>
+        <member name="M:csUnit.Assert.Null(System.Object)">
+            <summary>
+            Assert a reference is 'null'.
+            </summary>
+            <param name="obj">The object reference to be checked.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotNull(System.Object,System.String)">
+            <summary>
+            Assert object is not null.
+            </summary>
+            <param name="obj">Reference to be checked.</param>
+            <param name="message">Message to be displayed, when obj is null.</param>
+        </member>
+        <member name="M:csUnit.Assert.NotNull(System.Object)">
+            <summary>
+            Assert object is not null.
+            </summary>
+            <param name="obj">Object to be checked.</param>
+        </member>
+        <member name="M:csUnit.Assert.ReferenceEquals(System.Object,System.Object)">
+            <summary>
+            Assert that object reference refer to the same object.
+            </summary>
+            <param name="obj1">An object reference.</param>
+            <param name="obj2">A second object reference.</param>
+        </member>
+        <member name="M:csUnit.Assert.ReferenceEquals(System.Object,System.Object,System.String)">
+            <summary>
+            Assert that two object references refer to the same object.
+            </summary>
+            <param name="obj1">An object reference.</param>
+            <param name="obj2">A second object reference.</param>
+            <param name="message">Message to display, if the both references refer to different objects.</param>
+        </member>
+        <member name="M:csUnit.Assert.True(System.Boolean,System.String)">
+            <summary>
+            Verify whether expression is 'true'.
+            </summary>
+            <param name="expression">Boolean expression checked to be 'true'.</param>
+            <param name="message">Message to be displayed, when expression is 'false'.</param>
+        </member>
+        <member name="M:csUnit.Assert.True(System.Boolean)">
+            <summary>
+            Verify whether expression is 'true'.
+            </summary>
+            <param name="expression">Boolean expression checked to be 'true'.</param>
+        </member>
+        <member name="M:csUnit.Assert.StartsWith(System.String,System.String,System.String)">
+            <summary>
+            Assert that a string starts with a particular substring. The check is
+            case sensitive.
+            </summary>
+            <param name="expected">Expected start of the string.</param>
+            <param name="actual">String to check.</param>
+            <param name="message">Message to display when 'actual' does not start 
+            with 'expected'.</param>
+        </member>
+        <member name="M:csUnit.Assert.StartsWith(System.String,System.String)">
+            <summary>
+            Assert that a string starts with a particular substring. The check is
+            case sensitive.
+            </summary>
+            <param name="expected">Expected start of the string.</param>
+            <param name="actual">String to check.</param>
+        </member>
+        <member name="M:csUnit.Assert.ContainsType``1(System.Type,System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Asserts that a collection contains an object of a specified type.
+            </summary>
+            <typeparam name="T">Type of the elements in the collection.</typeparam>
+            <param name="type">Type of object to search from.</param>
+            <param name="toBeSearched">Collection to search in.</param>
+        </member>
+        <member name="M:csUnit.Assert.DoesNotContain(System.String,System.String)">
+            <summary>
+            Assert, that a string is not contained in a search string. The search
+            is case sensitive.
+            </summary>
+            <param name="searchString">The string to search for.</param>
+            <param name="toBeSearched">The string in which to search.</param>
+        </member>
+        <member name="M:csUnit.Assert.DoesNotContain(System.String,System.String,System.String)">
+            <summary>
+            Assert, that a string is not contained in a search string. The search
+            is case sensitive. This version accepts a custom message.
+            </summary>
+            <param name="searchString">The string to search for.</param>
+            <param name="toBeSearched">The string in which to search.</param>
+            <param name="customMessage">Message to display when assertion fails.</param>
+        </member>
+        <member name="M:csUnit.Assert.DoesNotContain``1(``0,System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Assert that an object of type T is not contained in a collection of 
+            type T. The search uses T.Equals to determine equivalence.
+            </summary>
+            <typeparam name="T">The type of the objects contained in the 
+            collection.</typeparam>
+            <param name="unexpected">The object to search for.</param>
+            <param name="toBeSearched">The collection to search in.</param>
+        </member>
+        <member name="M:csUnit.Assert.DoesNotContain``1(``0,System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            Assert that an object of type T is not contained in a collection of 
+            type T. The search uses T.Equals to determine equivalence.
+            </summary>
+            <typeparam name="T">The type of the objects contained in the 
+            collection.</typeparam>
+            <param name="unexpected">The object to search for.</param>
+            <param name="toBeSearched">The collection to search in.</param>
+            <param name="customMessage">Message to display if the assertion fails.
+            </param>
+        </member>
+        <member name="M:csUnit.Assert.FormatCollectionTypeName(System.Object)">
+            <summary>
+            Takes the mangled generic type name and converts it into a human
+            readable format.
+            </summary>
+            <param name="obj">An instance of a generic type.</param>
+            <returns>Human readable string of a generic type.</returns>
+            <remarks>If the object passed in as a parameter is not an instance
+            of a generic type, then an ArgumentException is thrown.</remarks>
+        </member>
+        <member name="F:csUnit.Assert.Mutex">
+            <summary>
+            Controls access to the assertion count
+            </summary>
+        </member>
+        <member name="F:csUnit.Assert._count">
+            <summary>
+            The count of invocations on this class
+            </summary>
+        </member>
+        <member name="P:csUnit.Assert.Count">
+            <summary>
+            Get/set the current assertion count
+            </summary>
+        </member>
+        <member name="T:csUnit.Categories">
+            <summary>
+            A collection of categories. If empty, it represents "all" categories.
+            </summary>
+            <remarks>Categories is similar to a Set of strings, but is differerent in two
+            aspects. The latter is the reason why it doesn't directly inherit from
+            class Set. 
+            A set accepts empty strings as elements. A Categories object does not.
+            A Category object that doesn't contain any elements represents "all" 
+            categories. This is not true for a set of strings.
+            Therefore inheritance would not have been appropriate, although the
+            Categories class has many operations (by name) in common with a set.
+            </remarks>
+        </member>
+        <member name="F:csUnit.Categories.Empty">
+            <summary>
+            Returns an empty Categories object.
+            </summary>
+        </member>
+        <member name="M:csUnit.Categories.Add(System.String)">
+            <summary>
+            Adds a category. Empty strings are ignored.
+            </summary>
+            <param name="categoryName">The name of the category.</param>
+        </member>
+        <member name="M:csUnit.Categories.Add(System.String[])">
+            <summary>
+            Adds multiple strings to a category. Empty strings are ignored.
+            </summary>
+            <param name="categoryNames">An array of category names.</param>
+        </member>
+        <member name="M:csUnit.Categories.Add(csUnit.Categories)">
+            <summary>
+            Adds a different set of categories. Duplicates are ignored.
+            </summary>
+            <param name="categories">Set of categories to be added.</param>
+        </member>
+        <member name="M:csUnit.Categories.Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="M:csUnit.Categories.Contains(System.String)">
+            <summary>
+            Tests whether a specific category is contained in the set.
+            </summary>
+            <param name="category">Name of category to test for.</param>
+            <returns>True, if the category is contained, false if not.</returns>
+        </member>
+        <member name="M:csUnit.Categories.Equals(System.Object)">
+            <summary>
+            Tests whether two Categories objects contain the same categories.
+            </summary>
+            <param name="obj">Categories object to compare.</param>
+            <returns>True, if both contain the same categories, false otherwise.
+            </returns>
+        </member>
+        <member name="M:csUnit.Categories.GetEnumerator">
+            <summary>
+            Gets an enumerator to iterate over the collection.
+            </summary>
+            <returns>An enumerator over strings.</returns>
+        </member>
+        <member name="M:csUnit.Categories.Intersect(csUnit.Categories)">
+            <summary>
+            Determines the intersection of two Categories objects.
+            </summary>
+            <param name="otherCats">A Cateogies object.</param>
+            <returns>A Categories object with categories that both sets have in 
+            common.</returns>
+        </member>
+        <member name="M:csUnit.Categories.Union(csUnit.Categories)">
+            <summary>
+            Determines the union of two Categories objects.
+            </summary>
+            <param name="otherCats">A Categories object.</param>
+            <returns>A Categories object with all categories that are also in at
+            least one of the two Categories objects.</returns>
+        </member>
+        <member name="M:csUnit.Categories.Remove(System.String)">
+            <summary>
+            Removes a specific category from the Categories object. Removing an
+            element that does not exist does not fail.
+            </summary>
+            <param name="category">Category name to remove.</param>
+        </member>
+        <member name="M:csUnit.Categories.ToArray">
+            <summary>
+            Converts the Categories object into an array of strings.
+            </summary>
+            <returns>A string array.</returns>
+        </member>
+        <member name="M:csUnit.Categories.ToString">
+            <summary>
+            Converts the Categories collection into a string representation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:csUnit.Categories.GetHashCode">
+            <summary>
+            Returns a hash code for this object.
+            </summary>
+            <returns>Integer hash code.</returns>
+        </member>
+        <member name="E:csUnit.Categories.Modified">
+            <summary>
+            Fired when a category has been added to or removed from the collection
+            of categories.
+            </summary>
+        </member>
+        <member name="P:csUnit.Categories.Count">
+            <summary>
+            Gets the number of categories in the set.
+            </summary>
+        </member>
+        <member name="P:csUnit.Categories.IsEmpty">
+            <summary>
+            Gets a boolean value indicating whether the Categories object is 
+            empty. Returns true, if the Categories objects doesn't contain any
+            category, false otherwise.
+            </summary>
+        </member>
+        <member name="T:csUnit.CsUnitAttribute">
+            <summary>
+            This is a tag class in order to facilitate scanning for csUnit related
+            attributes.
+            </summary>
+        </member>
+        <member name="T:csUnit.Data.DataRow">
+            <summary>
+            A data row specifies a set of parameters for a parameterized test.
+            </summary>
+        </member>
+        <member name="M:csUnit.Data.DataRow.#ctor(System.Object[])">
+            <summary>
+            Creates an instance of DataRow.
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:csUnit.Data.DataRow.Equals(System.Object)">
+            <summary>
+            Compares the data row object with a second object.
+            </summary>
+            <param name="obj"></param>
+            <returns>Returns true if both objects are equal, false otherwise.</returns>
+        </member>
+        <member name="M:csUnit.Data.DataRow.GetHashCode">
+            <summary>
+            Hash function for this type.
+            </summary>
+            <returns>A hash value</returns>
+        </member>
+        <member name="M:csUnit.Data.DataRow.ToString">
+            <summary>
+            Creates a string representatino of the data row.
+            </summary>
+            <returns>Data row in a string representation.</returns>
+        </member>
+        <member name="P:csUnit.Data.DataRow.ExpectedException">
+            <summary>
+            Sets/gets the expected exception.
+            </summary>
+        </member>
+        <member name="P:csUnit.Data.DataRow.Values">
+            <summary>
+            Gets/sets the parameter values that belong to this data row.
+            </summary>
+        </member>
+        <member name="T:csUnit.Data.DataSourceAttribute">
+            <summary>
+            Use DataSourceAttribute for providing information about value sets for
+            parameterized tests.
+            </summary>
+        </member>
+        <member name="M:csUnit.Data.DataSourceAttribute.#ctor(System.String)">
+            <summary>
+            Constructs a DataSourceAttribute instance using an XML file as the
+            data source for the parameterization.
+            </summary>
+            <param name="xmlFileName">Path and name of the XML file.</param>
+        </member>
+        <member name="M:csUnit.Data.DataSourceAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs a DataSourceAttribute instance for using an ADO.NET data
+            provider as a datasource.
+            </summary>
+            <param name="dataProviderInvariantName">Invariant name of the ADO.NET data provider.</param>
+            <param name="connectionString">Connection string for the data source.</param>
+            <param name="tableName">Table from the data source to be used.</param>
+        </member>
+        <member name="M:csUnit.Data.DataSourceAttribute.#ctor(System.Type)">
+            <summary>
+            Creates and instance of a DataSourceAttribute.
+            </summary>
+            <param name="dataProvider">Type that will provide data.</param>
+        </member>
+        <member name="P:csUnit.Data.DataSourceAttribute.DataRows">
+            <summary>
+            Returns rows containing value sets for parameterized tests.
+            </summary>
+        </member>
+        <member name="T:csUnit.ExpectedExceptionAttribute">
+            <summary>
+            The ExpectedExceptionAttribute can be used to mark a test, so that when
+            no exception of a particular type has been thrown, the test will be
+            reported as failed. Only if the exact exception type has been thrown, 
+            the test will pass, unless the IsRequired parameter is set to 'false'.
+            </summary>
+            <remarks>Use this attribute for tests that should fail if an exception
+            of a specific type has not been thrown. E.g. a division operation
+            should fail if the denominator is zero. Then you would write a test
+            with the ExpectedExceptionAttribute set, in which you would try to
+            divide by zero. If the division operation would proceed without
+            throwing the exception, the csUnit would detect that now exception
+            was thrown and the test would fail.</remarks>
+            <example>
+            <code>
+            [Test]
+            [ExpectedException(typeof(System.DivideByZeroException))]
+            public void TryDivisionByZero() {
+               int numerator = 5;
+               int denominator = 0;
+               int result = numerator / denominator;
+            }
+            </code></example>
+        </member>
+        <member name="M:csUnit.ExpectedExceptionAttribute.#ctor(System.Type)">
+            <summary>
+            Creates an ExpectedExceptionAttribute object. If the argument value
+            doesn't refer to System.Exception or a type derived from it.
+            </summary>
+            <param name="expectedExceptionType">Type of the expected exception.
+            </param>
+        </member>
+        <member name="M:csUnit.ExpectedExceptionAttribute.#ctor(System.Type,System.Object[])">
+            <summary>
+            Creates an ExpectedExceptionAttribute object. This constructor takes
+            a array of objects to be used as parameters to instantiate an object
+            of the exception type. That way not only the type but exception objects
+            can be compared.
+            </summary>
+            <remarks>According to the description of Exception.Message in the .NET
+            documentation, the Message propery "should completely describe the 
+            error". The implementation of ExpectedExceptionAttribute uses the
+            Message property to compare the actual exception with the expected
+            exception.
+            </remarks>
+            <param name="expectedExceptionType"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:csUnit.ExpectedExceptionAttribute.#ctor(System.Type,System.Boolean)">
+            <summary>
+            Don't use this constructor anymore. Either an exception is expected 
+            when running a test and then it must be thrown by the test code or
+            the test code must not throw the exception at all. Making an expected
+            exception as "not required" is in effect filtering an exception. If
+            this is the expected behavior then it should be expressed as a
+            try-catch block in the test itself. The ExpectedExceptionAttribute
+            should not be used for that case.
+            </summary>
+            <param name="expectedExceptionType">Type of the expected exception.
+            </param>
+            <param name="isRequired">true if this exception must be thrown to make
+            the test pass</param>
+        </member>
+        <member name="M:csUnit.ExpectedExceptionAttribute.Before">
+            <summary>
+            Invoked just before a test is executed.
+            </summary>
+        </member>
+        <member name="M:csUnit.ExpectedExceptionAttribute.Expects(System.Exception)">
+            <summary>
+            Returns a boolean value indicating whether an exception was expected 
+            or not.
+            </summary>
+            <param name="thrownException">The exception that was actually thrown.</param>
+            <returns>'true' if the exception was expected, 'false' otherwise.
+            </returns>
+        </member>
+        <member name="P:csUnit.ExpectedExceptionAttribute.ExceptionType">
+            <summary>
+            Gets the system type of the expected exception.
+            </summary>
+        </member>
+        <member name="P:csUnit.ExpectedExceptionAttribute.ExceptionTypeFullName">
+            <summary>
+            Gets the full name of the exception type that is expected to be
+            thrown.
+            </summary>
+        </member>
+        <member name="T:csUnit.FixtureSetUpAttribute">
+            <summary>
+            A method in a test fixture tagged with the FixtureSetUpAttribute
+            will be called once before running all the tests in the test fixture.
+            </summary>
+            <remarks>If you need a set up immediately before each test, use the
+            attribute SetUpAttribute instead.</remarks>
+        </member>
+        <member name="T:csUnit.FixtureTearDownAttribute">
+            <summary>
+            A method in a test fixture tagged with the FixtureTearDownAttribute
+            will be called once after running all the tests in the test fixture.
+            </summary>
+            <remarks>If you need a tear down immediately after each test, use the
+            attribute TearDownAttribute instead.</remarks>
+        </member>
+        <member name="T:csUnit.IgnoreAttribute">
+            <summary>
+            The IgnoreAttribute can be used to mark a test fixture or a test. When
+            marked this way, the test or the entire test fixture will not be excuted
+            when the tests are run.
+            </summary>
+            <remarks>The advantage compared to commenting out tests is that ignored
+            tests will still be visible in the csUnitRunner interface. This way they
+            will not be forgotten as could be the case when code is commented out.
+            However, they will not be displayed as passed or failed. Therefore they 
+            do not influence the test result.</remarks>
+        </member>
+        <member name="M:csUnit.IgnoreAttribute.#ctor(System.String)">
+            <summary>
+            Constructs an IgnoreAttribute object. When set on a test, the test
+            will be ignored by csUnit during test execution.
+            </summary>
+            <param name="reason">Why the test or the test fixture should be
+            ignored.</param>
+        </member>
+        <member name="P:csUnit.IgnoreAttribute.Reason">
+            <summary>
+            Gets the reason why a particular test was ignored.
+            </summary>
+        </member>
+        <member name="T:csUnit.MethodAttribute">
+            <summary>
+            Abstract base class for attributes that decorate methods within a test
+            fixture.
+            Known derived classes as of 05apr08 [ml]:
+            - SetUpAttribute
+            - TearDownAttribute
+            - TestAttribute
+            </summary>
+        </member>
+        <member name="F:csUnit.MethodAttribute._categories">
+            <summary>
+            Categories for this method.
+            </summary>
+        </member>
+        <member name="P:csUnit.MethodAttribute.AttributeName">
+            <summary>
+            Gets the human readable name of the attribute.
+            </summary>
+        </member>
+        <member name="P:csUnit.MethodAttribute.Category">
+            <summary>
+            Obsolete. Use property 'Categories' instead, which accepts one or more
+            categories.
+            </summary>
+        </member>
+        <member name="P:csUnit.MethodAttribute.Categories">
+            <summary>
+            Get/set the categories for this method. Specify multiple categories
+            separated by comma.
+            </summary>
+        </member>
+        <member name="P:csUnit.MethodAttribute._Categories">
+            <summary>
+            Get/set the categories for this method.
+            </summary>
+        </member>
+        <member name="T:csUnit.SetUpAttribute">
+            <summary>
+            A method in a test fixture tagged with the SetUpAttribute will be
+            executed immediately before each test. The method must have the type
+            'public void' and it must no take any parameters.
+            </summary>
+        </member>
+        <member name="P:csUnit.SetUpAttribute.AttributeName">
+            <summary>
+            Gets the human readable name of the attribute.
+            </summary>
+        </member>
+        <member name="T:csUnit.SourceLocation">
+            <summary>
+            SourceLocation describes a location in a source file by means of file
+            name and line number. csUnit currently doesn't required the column 
+            number.
+            </summary>
+        </member>
+        <member name="M:csUnit.SourceLocation.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates an instance of a SourceLocation.
+            </summary>
+            <param name="fileName">Name of the source file.</param>
+            <param name="lineNumber">Line number within the source file.</param>
+        </member>
+        <member name="M:csUnit.SourceLocation.Equals(System.Object)">
+            <summary>
+            Compares another object to this SourceLocation.
+            </summary>
+            <param name="obj">An object to compare.</param>
+            <returns>true if equal, false otherwise.</returns>
+        </member>
+        <member name="M:csUnit.SourceLocation.GetHashCode">
+            <summary>
+            Calculates a hash value used for collections.
+            </summary>
+            <returns>A hash code for the SourceLocation object.</returns>
+        </member>
+        <member name="M:csUnit.SourceLocation.ToString">
+            <summary>
+            Returns a string representation of the object.
+            </summary>
+            <returns>A string.</returns>
+        </member>
+        <member name="P:csUnit.SourceLocation.FileName">
+            <summary>
+            Gets the file name of the SourceLocation.
+            </summary>
+        </member>
+        <member name="P:csUnit.SourceLocation.LineNumber">
+            <summary>
+            Gets the line number of the SourceLocation.
+            </summary>
+        </member>
+        <member name="T:csUnit.TearDownAttribute">
+            <summary>
+            A method tagged with the TearDownAttribute will be called immediately
+            after the execution of each single test. The method must have the type
+            'public void' and must not take any parameter.
+            </summary>
+        </member>
+        <member name="M:csUnit.TearDownAttribute.#ctor">
+            <summary>
+            Constructs a TearDownAttribute object.
+            </summary>
+        </member>
+        <member name="M:csUnit.TearDownAttribute.#ctor(System.String)">
+            <summary>
+            Constructs with a specific category name
+            </summary>
+            <param name="cat"></param>
+        </member>
+        <member name="P:csUnit.TearDownAttribute.AttributeName">
+            <summary>
+            Gets the human readable name of the attribute.
+            </summary>
+        </member>
+        <member name="P:csUnit.TearDownAttribute.Category">
+            <summary>
+            Gets/sets the test context category for this attribute.
+            </summary>
+        </member>
+        <member name="T:csUnit.TestAssemblyFixtureAttribute">
+            <summary>
+            Use the TestAssemblyFixtureAttribute to decorate a class which contains
+            setup and teardown methods for an assembly. Apply it to only one class,
+            as the runtime will pick up only the first one it finds.
+            The setup method needs to be marked with the <seealso cref="T:csUnit.SetUpAttribute"/>.
+            The teardown method requires the <seealso cref="T:csUnit.TearDownAttribute"/>.
+            </summary>
+            <remarks>The setup method will be executed before any test in the 
+            assembly is executed. The teardown method will be executed after all 
+            tests in the assembly have been executed, regardless of the outcome of
+            those tests.
+            </remarks>
+        </member>
+        <member name="M:csUnit.TestAssemblyFixtureAttribute.#ctor">
+            <summary>
+            Constructs a TestAssemblyAttribute instance. No further parameters
+            are needed.
+            </summary>
+            <remarks>While you can mark several classes in a test assembly with
+            this attribute, the csUnit runtime will use only the first it finds.
+            The order to classes is not guaranteed. So make sure you have at most
+            one TestAssemblyFixture per test assembly.</remarks>
+        </member>
+        <member name="T:csUnit.TestAttribute">
+            <summary>
+            A method tagged with the TestAttribute will be identified as a test
+            within a testfixture. The method must be of type 'public void' and it
+            must not take any parameter.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestAttribute.Timeout">
+            <summary>
+            Gets/sets the timeout for the test. The value is milliseconds.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestAttribute.AttributeName">
+            <summary>
+            Gets the human readable name of the attribute.
+            </summary>
+        </member>
+        <member name="T:csUnit.TestFailed">
+            <summary>
+            TestFailed is an exception that will be thrown when a test has failed, that is when an
+            assertion has failed.
+            </summary>
+        </member>
+        <member name="M:csUnit.TestFailed.#ctor(System.String,System.String)">
+            <summary>
+            Constructor capturing expected and actual separately.
+            </summary>
+            <param name="expected">The string representing what was expected.</param>
+            <param name="actual">The string representing the actual value.</param>
+        </member>
+        <member name="M:csUnit.TestFailed.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor capturing expected and actual separately and also taking
+            a custom message.
+            </summary>
+            <param name="expected">The string representing what was expected.</param>
+            <param name="actual">The string representing the actual value.</param>
+            <param name="customMessage">Custom message to be displayed instead of the standard message.</param>
+        </member>
+        <member name="M:csUnit.TestFailed.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor required for deserialization.
+            </summary>
+            <param name="info">Serialization info</param>
+            <param name="context">Context</param>
+        </member>
+        <member name="M:csUnit.TestFailed.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Method is invoked during serialization. Users of csUnit should not
+            have the need to use this method.
+            </summary>
+            <param name="info">Serialization info</param>
+            <param name="context">Streaming context</param>
+        </member>
+        <member name="M:csUnit.TestFailed.Equals(System.Object)">
+            <summary>
+            Compares two TestFailed instances.
+            </summary>
+            <param name="obj">Object to compare to.</param>
+            <returns>'true' if equal, 'false' otherwise.</returns>
+        </member>
+        <member name="M:csUnit.TestFailed.GetHashCode">
+            <summary>
+            Hash function for this type.
+            </summary>
+            <returns>A hashvalue.</returns>
+        </member>
+        <member name="P:csUnit.TestFailed.Message">
+            <summary>
+            Gets the message that gives further details about the reasons for the 
+            failed tests.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFailed.Expected">
+            <summary>
+            Gets string describing the expected outcome.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFailed.Actual">
+            <summary>
+            Gets a string describing the actual outcome.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFailed.Tip">
+            <summary>
+            Gets a string containing a suggestion for avoiding the failure. This
+            property is an empty string if no such suggestion can be derived from
+            the available information.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFailed.HasTip">
+            <summary>Returns true if a tip can be provided for the failure.
+            </summary>
+        </member>
+        <member name="T:csUnit.TestFixtureAttribute">
+            <summary>
+            A public class with the TestFixtureAttribute set will be identified as
+            a test fixture.
+            </summary>
+        </member>
+        <member name="F:csUnit.TestFixtureAttribute._categories">
+            <summary>
+            The categories for this test fixture.
+            </summary>
+        </member>
+        <member name="M:csUnit.TestFixtureAttribute.#ctor">
+            <summary>
+            Constructs a TestFixtureAttribute object.
+            </summary>
+        </member>
+        <member name="M:csUnit.TestFixtureAttribute.#ctor(System.String)">
+            <summary>
+            Constructs a TestFixtureAttribute object with a specific category.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFixtureAttribute.Category">
+            <summary>
+            Get/set the category for this fixture.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFixtureAttribute.Categories">
+            <summary>
+            Get/set the categories for this fixture. Multiple categories can be
+            specified comma-separated.
+            </summary>
+        </member>
+        <member name="P:csUnit.TestFixtureAttribute._Categories">
+            <summary>
+            Don't use. This property is for csUnit's internal use only.
+            </summary>
+        </member>
+    </members>
+</doc>

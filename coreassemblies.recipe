@@ -1,0 +1,11 @@
+<recipe>
+  <assembly path="csUnit\csUnitTest\obj\Debug\csUnitTest.exe" />
+  <assembly path="csUnit.Common\csUnit.Common.Tests\obj\Debug\csUnit.Common.Tests.dll" />
+  <assembly path="csUnit.Core\csUnit.Core.Tests\obj\Debug\csUnit.Core.Tests.dll" />
+  <assembly path="csUnit.Interfaces\csUnit.Interfaces.Tests\obj\Debug\csUnit.Interfaces.Tests.dll" />
+  <assembly path="csUnit.Ui.Controls\csUnit.Ui.Controls.Tests\obj\Debug\csUnit.Ui.Controls.Tests.dll" />
+  <assembly path="csUnitCmd\csUnitCmdTest\obj\Debug\csUnitCmdTest.dll" />
+  <selector selectorClass="csUnit.Core.CategorySelector">
+    <categorySelector />
+  </selector>
+</recipe>

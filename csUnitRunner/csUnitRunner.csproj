@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D83244D-BD45-4A5F-BA88-36FB5441F01F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>csUnit.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>csUnitRunner</AssemblyName>
+    <AssemblyOriginatorKeyFile>csUnit.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>csUnit.Runner</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>csUnit.Runner.csUnitRunner</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\csUnit.Common\csUnit.Common.csproj">
+      <Project>{B2CFAD93-ECED-48DE-A1C9-041AE50EAD1A}</Project>
+      <Name>csUnit.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit.Core\csUnit.Core.csproj">
+      <Project>{AD191D69-9323-47E4-8BFA-397601AA241E}</Project>
+      <Name>csUnit.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit.Interfaces\csUnit.Interfaces.csproj">
+      <Name>csUnit.Interfaces</Name>
+      <Project>{FED66A86-7FE7-49DA-B82A-B29F3683720E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit.Ui.Controls\csUnit.Ui.Controls.csproj">
+      <Name>csUnit.Ui.Controls</Name>
+      <Project>{FBC204BC-5647-4DB2-B629-51C85DD9405E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CheckForUpdatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckForUpdatesProxyAuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commands\AboutCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AssemblyAddCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AssemblyReloadCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AssemblyRemoveCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CheckForUpdatesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\FileExitCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\FileLoader.cs" />
+    <Compile Include="Commands\GotoOnlineDocumentationCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\RecentAssembliesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\RecentRecipesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\RecipeNewCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\RecipeOpenCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\RecipeSaveAsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\RecipeSaveCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ReportBugCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\SaveResultsAsXmlCommand.cs" />
+    <Compile Include="Commands\TestFormCommand.cs" />
+    <Compile Include="Commands\ViewOptionsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ViewStatusBarCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ViewToolBarCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigCurrentUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="csUnitRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecentAssemblies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecentRecipies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckForUpdatesForm.resx">
+      <DependentUpon>CheckForUpdatesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckForUpdatesProxyAuthenticationForm.resx">
+      <DependentUpon>CheckForUpdatesProxyAuthenticationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="csUnit.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Commands\Images\AssemblyAddCommand.png" />
+    <EmbeddedResource Include="Commands\Images\AssemblyReloadCommand.png" />
+    <EmbeddedResource Include="Commands\Images\AssemblyRemoveCommand.png" />
+    <EmbeddedResource Include="Commands\Images\RecipeNewCommand.png" />
+    <EmbeddedResource Include="Commands\Images\RecipeSaveCommand.png" />
+    <EmbeddedResource Include="Commands\Images\AddAssembly.png" />
+    <EmbeddedResource Include="Commands\Images\OpenRecipe.png" />
+    <EmbeddedResource Include="Commands\Images\SaveRecipe.png" />
+    <EmbeddedResource Include="Commands\Images\NewRecipe.png" />
+    <EmbeddedResource Include="Commands\Images\DeleteAssembly.png" />
+    <EmbeddedResource Include="Commands\Images\RefreshAssembly.png" />
+    <Content Include="csUnit.ico" />
+    <Content Include="Images\Comment.gif" />
+    <Content Include="Images\dlginfo.ico" />
+    <Content Include="Images\dlgwarning.ico" />
+    <Content Include="Images\TestAssembly.gif" />
+    <Content Include="Images\TestAssemblyError.gif" />
+    <Content Include="Images\TestAssemblyPassed.GIF" />
+    <Content Include="Images\TestAssemblySkipped.GIF" />
+    <Content Include="Images\TestAssemblyWarning.gif" />
+    <Content Include="Images\TestFixture.gif" />
+    <Content Include="Images\TestFixtureError.gif" />
+    <Content Include="Images\TestFixturePassed.GIF" />
+    <Content Include="Images\TestFixtureSkipped.GIF" />
+    <Content Include="Images\TestFixtureWarning.gif" />
+    <Content Include="Images\TestMethod.gif" />
+    <Content Include="Images\TestMethodError.gif" />
+    <Content Include="Images\TestMethodPassed.GIF" />
+    <Content Include="Images\TestMethodSkipped.GIF" />
+    <Content Include="Images\TestMethodWarning.gif" />
+    <Content Include="Images\TestSuite.gif" />
+    <Content Include="Images\TestSuiteError.gif" />
+    <Content Include="Images\TestSuitePassed.GIF" />
+    <Content Include="Images\TestSuiteSkipped.GIF" />
+    <Content Include="Images\TestSuiteWarning.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

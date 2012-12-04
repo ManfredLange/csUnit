@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C804D121-4E22-43B5-9E56-CEF03F457EF5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>csUnit.Core.Tests</AssemblyName>
+    <AssemblyOriginatorKeyFile>csUnit.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>csUnit.Core.Tests</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Mono Release|AnyCPU' ">
+    <OutputPath>bin\Mono\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Mono Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Mono Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\csUnit.Common\csUnit.Common.csproj">
+      <Project>{B2CFAD93-ECED-48DE-A1C9-041AE50EAD1A}</Project>
+      <Name>csUnit.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\csUnit.Interfaces\csUnit.Interfaces.csproj">
+      <Name>csUnit.Interfaces</Name>
+      <Project>{FED66A86-7FE7-49DA-B82A-B29F3683720E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\csUnit\csUnit.csproj">
+      <Name>csUnit</Name>
+      <Project>{CA0EC72A-53A9-4B6A-B79B-E5E45C2DEC71}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\mocks\ConsoleRedirection\Mock.ConsoleRedirection.csproj">
+      <Project>{48D6C4B8-8839-4B81-B563-F8944191FCCF}</Project>
+      <Name>Mock.ConsoleRedirection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\csUnit.Core.csproj">
+      <Project>{AD191D69-9323-47E4-8BFA-397601AA241E}</Project>
+      <Name>csUnit.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyFactoryTests.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CategoriesTests.cs" />
+    <Compile Include="CategorySelectorTests.cs" />
+    <Compile Include="CmdLineHandlerTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DataRowAttributeTests.cs" />
+    <Compile Include="Data\DataSourceAttributeTests.cs" />
+    <Compile Include="DynamicallyLoadedAssemblyTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpectedExceptionTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexSelectorTests.cs" />
+    <Compile Include="SelectorTests.cs" />
+    <Compile Include="FixtureSetUpTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FixtureTearDownTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IgnoreTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoaderFactoryTests.cs" />
+    <Compile Include="LoaderMock.cs" />
+    <Compile Include="LoaderTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NullListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecipeFactoryTests.cs" />
+    <Compile Include="RecipeTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RemoteLoaderTests.cs" />
+    <Compile Include="SimpleTestListener.cs" />
+    <Compile Include="SimpleTestListenerTests.cs" />
+    <Compile Include="TestAssemblyFixtureAttributeTests.cs" />
+    <Compile Include="TestAssemblyTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestFixtureTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestMethodTests.cs" />
+    <Compile Include="Criteria.Tests\CriteriaTests.cs" />
+    <Compile Include="TestSpecTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestSuiteTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UtilTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlDocumentFactoryTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="csUnit.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\csUnitTestData.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csUnitTestData_log.LDF">
+      <DependentUpon>csUnitTestData.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
