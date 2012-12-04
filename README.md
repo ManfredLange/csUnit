@@ -1,4 +1,4 @@
 csunit
 ======
 
-Planned new home of csUnit
+This is the planned new home for csUnit.
