@@ -1,4 +1,9 @@
+#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+//                  http://www.agileutilities.com
+//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //
@@ -20,6 +25,7 @@
 //
 // 3. This notice may not be removed or altered from any source distribution.
 ////////////////////////////////////////////////////////////////////////////////
+#endregion
 
 #if USE_NEW_TEST_TREE
 

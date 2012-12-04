@@ -1,5 +1,9 @@
-﻿#region Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, and Piers Lawson. All rights reserved.
+﻿#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+//                  http://www.agileutilities.com
+//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //

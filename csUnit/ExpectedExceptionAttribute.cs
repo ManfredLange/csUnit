@@ -1,4 +1,9 @@
+#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+//                  http://www.agileutilities.com
+//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //
@@ -20,6 +25,7 @@
 //
 // 3. This notice may not be removed or altered from any source distribution.
 ////////////////////////////////////////////////////////////////////////////////
+#endregion
 
 using System;
 using System.Reflection;
@@ -62,7 +68,7 @@ namespace csUnit {
 
       private void ValidateExceptionType(Type expectedExceptionType) {
          if(   !expectedExceptionType.IsSubclassOf(typeof(Exception))
-               && !expectedExceptionType.Equals(typeof(Exception))) {
+               && !(expectedExceptionType == typeof(Exception))) {
             throw new ArgumentException("Argument value must refer to System.Exception or a type derived from it.");
          }
          _expectedExceptionType = expectedExceptionType;

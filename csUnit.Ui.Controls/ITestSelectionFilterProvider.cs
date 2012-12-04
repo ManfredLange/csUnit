@@ -1,4 +1,9 @@
+#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+//                  http://www.agileutilities.com
+//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //
@@ -20,10 +25,11 @@
 //
 // 3. This notice may not be removed or altered from any source distribution.
 ////////////////////////////////////////////////////////////////////////////////
+#endregion
 
 namespace csUnit.Ui.Controls {
    interface ITestSelectionFilterProvider {
-      // Members to be implemented by elements that want to selector the set
+      // Members to be implemented by elements that want to define the set
       // of selected tests before it is actually be executed. This can for
       // instance be used by a categories tab page.
       // [24Mar2006, ml]

@@ -1,5 +1,9 @@
-#region Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, and Piers Lawson. All rights reserved.
+#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+//                  http://www.agileutilities.com
+//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //
@@ -37,7 +41,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("csunit.org")]
 [assembly: AssemblyProduct("csUnit")]
-[assembly: AssemblyCopyright("Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, and Piers Lawson. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2012 by Agile Utilities New Zealand. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -52,7 +56,7 @@ using System.Runtime.InteropServices;
 // You can specify all the value or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("2.7.*")]
+[assembly: AssemblyVersion("2.8.*")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 

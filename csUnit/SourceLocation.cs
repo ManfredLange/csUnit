@@ -1,5 +1,9 @@
-#region Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, and Piers Lawson. All rights reserved.
+#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+//                  http://www.agileutilities.com
+//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //
@@ -56,7 +60,7 @@ namespace csUnit {
       /// <returns>true if equal, false otherwise.</returns>
       public override bool Equals(object obj) {
          if(   obj != null 
-            && obj.GetType().Equals(GetType())) {
+            && obj.GetType() == GetType()) {
                var otherLoc = (SourceLocation) obj;
                if(_fileName.Equals(otherLoc.FileName)
                   && _lineNumber.Equals(otherLoc.LineNumber)) {
