@@ -28,6 +28,7 @@
 #endregion
 
 using System;
+using System.IO;
 using csUnit.Common;
 using csUnit.Core.Criteria;
 using csUnit.Data;
@@ -338,12 +339,22 @@ namespace csUnit.Core.Tests.Data {
 
       [TestFixture]
       public class DbAsSource {
+         [FixtureSetUp]
+         public void SetUp() {
+            // Idea for the following from:
+            // http://stackoverflow.com/a/3501950/411428
+            // [ml, 06dec2012]
+            var databaseFileName = Path.Combine(Environment.CurrentDirectory, "..\\..\\Data\\");
+            databaseFileName = new FileInfo(databaseFileName).FullName;
+            AppDomain.CurrentDomain.SetData("DataDirectory", databaseFileName);
+         }
+
          [Test]
          public void JustTheAttribute() {
             var dsa = new DataSourceAttribute("System.Data.SqlClient", 
-               "Data Source=.\\SQLEXPRESS;" +
-               @"AttachDBFilename=|DataDirectory|\Data\csUnitTestData.mdf;" +
-               "Integrated Security=True;Connect Timeout=30;User Instance=True", 
+               string.Format("Data Source=.\\SQLEXPRESS;" +
+               @"AttachDBFilename=|DataDirectory|\csUnitTestData.mdf;" +
+               "Integrated Security=True;Connect Timeout=30;User Instance=True"), 
                "DivisionTests");
             var rows = dsa.DataRows;
             Assert.Contains(new DataRow(4, 2, 2), rows, "Note: SQL Server (Express) database needed to pass");
@@ -354,11 +365,9 @@ namespace csUnit.Core.Tests.Data {
 
          private class DivisionTests {
             [Test]
-            [DataSource("System.Data.SqlClient",
-               "Data Source=.\\SQLEXPRESS;" +
-               @"AttachDBFilename=|DataDirectory|\Data\csUnitTestData.mdf;" +
-               "Integrated Security=True;Connect Timeout=30;User Instance=True", 
-               "DivisionTests")] 
+            [DataSource("System.Data.SqlClient", connectionString:   "Data Source=.\\SQLEXPRESS;" +
+               @"AttachDBFilename=|DataDirectory|\csUnitTestData.mdf;" +
+               "Integrated Security=True;Connect Timeout=30;User Instance=True", tableName: "DivisionTests")] 
             public void Division(int nominator, int denominator, int expectedResult) {
                var actualResult = nominator / denominator;
                Assert.Equals(expectedResult, actualResult);
@@ -401,7 +410,7 @@ namespace csUnit.Core.Tests.Data {
             [Test]
             [DataSource("System.Data.SqlClient",
                "Data Source=.\\SQLEXPRESS;" +
-               @"AttachDBFilename=|DataDirectory|\csUnitTestData.mdf;" +
+               //@"AttachDBFilename=|DataDirectory|\csUnitTestData.mdf;" +
                "AttachDbFilename=\"C:\\Program Files\\Microsoft SQL Server\\MSSQL.1\\MSSQL\\Data\\fooTestData.mdf\";" +
                "Integrated Security=True;Connect Timeout=10;User Instance=True",
                "DivisionTests")]

@@ -56,7 +56,6 @@ namespace csUnit.Core.Tests {
          [Test]
          public void ConsoleIsRedirected() {
             var assemblyPathName = Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\..\\build\\Debug\\ConsoleRedirection.dll");
-               //Environment.CurrentDirectory + "/ConsoleRedirection.dll";
 
             using(var recipe = RecipeFactory.NewRecipe(string.Empty)) {
                var temporarilyStoredConsoleOut = Console.Out;
