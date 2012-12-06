@@ -22,6 +22,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csUnit.Common.Tests", "csUnit.Common\csUnit.Common.Tests\csUnit.Common.Tests.csproj", "{F5C44FC4-C5F6-4D50-BAD5-9E106C264924}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csUnit.Core.Tests", "csUnit.Core\csUnit.Core.Tests\csUnit.Core.Tests.csproj", "{C804D121-4E22-43B5-9E56-CEF03F457EF5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A} = {F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csUnit.Interfaces.Tests", "csUnit.Interfaces\csUnit.Interfaces.Tests\csUnit.Interfaces.Tests.csproj", "{A229ECD5-A0F8-4187-A278-C788720620BB}"
 EndProject
@@ -32,6 +35,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock.ConsoleRedirection", "mocks\ConsoleRedirection\Mock.ConsoleRedirection.csproj", "{48D6C4B8-8839-4B81-B563-F8944191FCCF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testData", "testData", "{4AA29342-363E-414C-B742-01F414BC835E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDll", "TestDll\TestDll.csproj", "{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -349,11 +354,32 @@ Global
 		{48D6C4B8-8839-4B81-B563-F8944191FCCF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{48D6C4B8-8839-4B81-B563-F8944191FCCF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{48D6C4B8-8839-4B81-B563-F8944191FCCF}.Release|x86.ActiveCfg = Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Debug|Any CPU.ActiveCfg = Mono Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Debug|Any CPU.Build.0 = Mono Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Debug|Mixed Platforms.ActiveCfg = Mono Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Debug|Mixed Platforms.Build.0 = Mono Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Debug|x86.ActiveCfg = Mono Debug|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Release|Any CPU.ActiveCfg = Mono Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Release|Any CPU.Build.0 = Mono Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Release|Mixed Platforms.ActiveCfg = Mono Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Release|Mixed Platforms.Build.0 = Mono Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Mono Release|x86.ActiveCfg = Mono Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{48D6C4B8-8839-4B81-B563-F8944191FCCF} = {4AA29342-363E-414C-B742-01F414BC835E}
+		{F420DA65-F4F3-4099-8AE7-F638AB2D8B6A} = {4AA29342-363E-414C-B742-01F414BC835E}
 	EndGlobalSection
 EndGlobal

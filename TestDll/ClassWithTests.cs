@@ -1,9 +1,5 @@
-#region Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
+#region Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, and Piers Lawson. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
-//
-// Copyright © 2012 by Agile Utilities New Zealand Ltd. All rights reserved.
-//                  http://www.agileutilities.com
-//
 // Copyright © 2002-2011 by Manfred Lange, Markus Renschler, Jake Anderson, 
 //                       and Piers Lawson. All rights reserved.
 //
@@ -27,35 +23,29 @@
 ////////////////////////////////////////////////////////////////////////////////
 #endregion
 
-using System;
-using System.IO;
+using csUnit;
 
-namespace csUnit.Core.Tests {
+namespace TestDll {
    /// <summary>
-   /// Some helper methods for this project.
+   /// This class is used for performing some test on csUnitCore. Note, that
+   /// some of the tests in here are failing on purpose! [ml]
    /// </summary>
-   internal abstract class Util {
-      /// <summary>
-      /// Returns the path to the where the solution file is located.
-      /// </summary>
-      /// <returns></returns>
-      public static string SolutionCodeBase {
-         get {
-            var url = new Uri(typeof(Util).Assembly.CodeBase);
-            var fi = new FileInfo(url.AbsolutePath);
-            var path = Path.Combine(fi.DirectoryName, "..\\..\\..\\..\\");
-            return NormalizePath(path);
-         }
+   [TestFixture]
+   public class ClassWithTests {
+      [Test]
+      public void ASucceedingTest() {
       }
 
-      /// <summary>
-      /// Removes useless ../ parts in the path
-      /// </summary>
-      /// <param name="source">A path created using Path.Combine()</param>
-      /// <returns>A path without ../ elements</returns>
-      public static string NormalizePath(string source) {
-         var temp = new FileInfo(source);
-         return Path.Combine(temp.DirectoryName, temp.Name);
+      [Test]
+      public void AFailingTest() {
+         Assert.Equals(1, 2);
+      }
+
+      [Test]
+      public void ATestWithError() {
+         int i = 0;
+         int j = 1;
+         int k = j / i;
       }
    }
 }

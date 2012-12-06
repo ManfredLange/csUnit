@@ -238,7 +238,7 @@ namespace csUnit {
          }
          else if( !expected.Equals(actual) ) {
             if( expected.ToString() == actual.ToString()
-               && !expected.GetType().Equals(actual.GetType()) ) {
+               && !(expected.GetType() == actual.GetType()) ) {
                throw new ArgumentException("Parameters are not of the same type.");
             }
             throw new TestFailed(
