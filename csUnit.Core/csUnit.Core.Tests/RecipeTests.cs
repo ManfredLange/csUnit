@@ -45,6 +45,10 @@ namespace csUnit.Core.Tests {
    /// </summary>
    [TestFixture]
    public class RecipeTests {
+      public RecipeTests() {
+         _testDll = Path.Combine(Util.SolutionCodeBase, "TestDll\\bin\\Debug\\testDll.dll");         
+      }
+
       [FixtureSetUp]
       public void Initialize() {
          RecipeFactory.Type = RecipeFactory.Default;
@@ -366,7 +370,7 @@ namespace csUnit.Core.Tests {
       [Test]
       public void UsesCriteria() {
          var uri = new Uri(GetType().Assembly.CodeBase);
-         const string targetPath = "..\\..\\TestDll\\bin\\Debug\\csUnit.Core.Tests.dll";
+         var targetPath = Path.Combine(Util.SolutionCodeBase, "build\\Debug\\csUnit.Core.Tests.dll");
          if( File.Exists(targetPath) ) {
             File.Delete(targetPath);
          }
@@ -374,7 +378,7 @@ namespace csUnit.Core.Tests {
          var recipe = RecipeFactory.NewRecipe(string.Empty) as Recipe;
          var criterion = new MyCriterion();
          if (recipe != null) {
-            recipe.AddAssembly(TestDll);
+            recipe.AddAssembly(_testDll);
             recipe.RunTests(new TestRun(criterion));
             recipe.Join();
          }
@@ -463,7 +467,7 @@ namespace csUnit.Core.Tests {
       [Test]
       public void CriterionAppliedWithMultipleAssemblies() {
          var recipe = RecipeFactory.NewRecipe("twoassemblies.deleteme.recipe");
-         recipe.AddAssembly(TestDll);
+         recipe.AddAssembly(_testDll);
          recipe.AddAssembly("..\\..\\csUnit.CompatibilityTests\\NUnit-2.4.7\\bin\\Debug\\NUnit-2.4.7.dll");
          var listener = new SimpleRecipeListener(recipe);
 
@@ -485,7 +489,7 @@ namespace csUnit.Core.Tests {
       [Test]
       public void CriterionIsRemovedForSecondTestRun() {
          var recipe = RecipeFactory.NewRecipe(string.Empty);
-         recipe.AddAssembly(TestDll);
+         recipe.AddAssembly(_testDll);
 
          var criterion = new NameCriterion("TestDll.ClassWithTests.ASucceedingTest");
          var listener = new SimpleRecipeListener(recipe);
@@ -502,7 +506,7 @@ namespace csUnit.Core.Tests {
       [Test]
       public void CriterionIsAppliedForSecondTestRun() {
          var recipe = RecipeFactory.NewRecipe(string.Empty);
-         recipe.AddAssembly(TestDll);
+         recipe.AddAssembly(_testDll);
 
          var listener = new SimpleRecipeListener(recipe);
          recipe.RunTests(new TestRun(new AllTestsCriterion()));
@@ -525,7 +529,7 @@ namespace csUnit.Core.Tests {
 
       private string _absoluteRecipeFileName = string.Empty;
       private string _csUnitTestExePath = string.Empty;
-      private const string TestDll = "..\\..\\TestDll\\bin\\Debug\\testDll.dll";
+      private readonly string _testDll = string.Empty;
    }
 
    // ReSharper restore UnusedMember.Local
