@@ -13,10 +13,12 @@
 /csUnitCmd/obj
 /csUnitRunner/obj
 /*.suo
-/build/Debug
 /TestDll/bin
 /TestDll/obj
 /csUnit.CompatibilityTests/NUnit-2.4.7/obj
 /csUnit.CompatibilityTests/NUnit-2.4.7/bin
 /csUnit.CompatibilityTests/*.user
 /csUnit.CompatibilityTests/*.suo
+/build
+/mocks/ConsoleRedirection/bin
+/mocks/ConsoleRedirection/obj
