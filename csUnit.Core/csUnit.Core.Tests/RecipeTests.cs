@@ -48,13 +48,7 @@ namespace csUnit.Core.Tests {
       [FixtureSetUp]
       public void Initialize() {
          RecipeFactory.Type = RecipeFactory.Default;
-         var url = new Uri(GetType().Assembly.CodeBase);
-         var fi = new FileInfo(url.AbsolutePath);
-         _path = fi.DirectoryName;
-// ReSharper disable AssignNullToNotNullAttribute
-         _csUnitTestExe = Path.Combine(_path, "csUnitTest.exe");
-// ReSharper restore AssignNullToNotNullAttribute
-
+         _csUnitTestExePath = Path.Combine(Util.SolutionCodeBase, "build\\Debug\\csUnitTest.exe");
          _absoluteRecipeFileName = Core.Util.GetAbsoluteFilename(Environment.CurrentDirectory, "test.recipe");
       }
 
@@ -75,7 +69,7 @@ namespace csUnit.Core.Tests {
       public void AddAssembly() {
          LoaderFactory.Type = typeof(LoaderMock);
          var r = RecipeFactory.NewRecipe(string.Empty);
-         r.AddAssembly(_csUnitTestExe);
+         r.AddAssembly(_csUnitTestExePath);
          Assert.Equals(1, r.AssemblyCount);
       }
 
@@ -83,8 +77,8 @@ namespace csUnit.Core.Tests {
       public void AddSameAssemblyTwice() {
          LoaderFactory.Type = typeof(LoaderMock);
          var r = RecipeFactory.NewRecipe(string.Empty);
-         r.AddAssembly(_csUnitTestExe);
-         r.AddAssembly(_csUnitTestExe);
+         r.AddAssembly(_csUnitTestExePath);
+         r.AddAssembly(_csUnitTestExePath);
          Assert.Equals(1, r.AssemblyCount);
       }
 
@@ -92,8 +86,8 @@ namespace csUnit.Core.Tests {
       public void RemoveAssembly() {
          LoaderFactory.Type = typeof(LoaderMock);
          var r = RecipeFactory.NewRecipe(string.Empty);
-         r.AddAssembly(_csUnitTestExe);
-         r.RemoveAssembly(_csUnitTestExe);
+         r.AddAssembly(_csUnitTestExePath);
+         r.RemoveAssembly(_csUnitTestExePath);
          Assert.Equals(0, r.AssemblyCount);
       }
 
@@ -110,7 +104,7 @@ namespace csUnit.Core.Tests {
 
          var path = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
          var r = RecipeFactory.NewRecipe(string.Empty);
-         r.AddAssembly(_csUnitTestExe);
+         r.AddAssembly(_csUnitTestExePath);
          r.Save(path + "\\SaveRetrieve.recipe");
 
          var retrieved = RecipeFactory.Load(path + "\\SaveRetrieve.recipe");
@@ -120,7 +114,7 @@ namespace csUnit.Core.Tests {
       [Test]
       public void ForEach() {
          LoaderFactory.Type = typeof(LoaderMock);
-         var required = new[] {_csUnitTestExe, GetType().Assembly.Location };
+         var required = new[] {_csUnitTestExePath, GetType().Assembly.Location };
          var r = RecipeFactory.NewRecipe(string.Empty);
          r.AddAssembly(required[0]);
          r.AddAssembly(required[1]);
@@ -182,16 +176,16 @@ namespace csUnit.Core.Tests {
       public void FindAssemblyByName() {
          LoaderFactory.Type = typeof(LoaderMock);
          var r = RecipeFactory.NewRecipe(string.Empty);
-         r.AddAssembly(_csUnitTestExe);
-         var ta = r[_csUnitTestExe];
-         Assert.Equals(ta.Name.CodeBase, _csUnitTestExe);
+         r.AddAssembly(_csUnitTestExePath);
+         var ta = r[_csUnitTestExePath];
+         Assert.Equals(ta.Name.CodeBase, _csUnitTestExePath);
       }
 
       [Test]
       public void FindAssemblyByNameWithUnknownName() {
          LoaderFactory.Type = typeof(LoaderMock);
          IRecipe r = RecipeFactory.NewRecipe(string.Empty);
-         r.AddAssembly(_csUnitTestExe);
+         r.AddAssembly(_csUnitTestExePath);
          var ta = r["fluffy duck"];
          Assert.Null(ta);
       }
@@ -199,7 +193,7 @@ namespace csUnit.Core.Tests {
       [Test]
       public void FindAssemblyByNameInEmptyRecipe() {
          var r = RecipeFactory.NewRecipe(string.Empty);
-         var ta = r[_csUnitTestExe];
+         var ta = r[_csUnitTestExePath];
          Assert.Null(ta);
       }
 
@@ -530,8 +524,7 @@ namespace csUnit.Core.Tests {
       }
 
       private string _absoluteRecipeFileName = string.Empty;
-      private string _path = string.Empty;
-      private string _csUnitTestExe = string.Empty;
+      private string _csUnitTestExePath = string.Empty;
       private const string TestDll = "..\\..\\TestDll\\bin\\Debug\\testDll.dll";
    }
 
