@@ -47,6 +47,7 @@ namespace csUnit.Core.Tests {
    public class RecipeTests {
       [FixtureSetUp]
       public void Initialize() {
+         RecipeFactory.Type = RecipeFactory.Default;
          var url = new Uri(GetType().Assembly.CodeBase);
          var fi = new FileInfo(url.AbsolutePath);
          _path = fi.DirectoryName;
