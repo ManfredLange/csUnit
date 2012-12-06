@@ -1,0 +1,10 @@
+C:\projects\csUnit\mocks\ConsoleRedirection\bin\Debug\ConsoleRedirection.dll
+C:\projects\csUnit\mocks\ConsoleRedirection\bin\Debug\ConsoleRedirection.pdb
+C:\projects\csUnit\mocks\ConsoleRedirection\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\csUnit\mocks\ConsoleRedirection\obj\Debug\ConsoleRedirection.dll
+C:\projects\csUnit\mocks\ConsoleRedirection\obj\Debug\ConsoleRedirection.pdb
+C:\projects\au\csunit-github\mocks\ConsoleRedirection\bin\Debug\ConsoleRedirection.dll
+C:\projects\au\csunit-github\mocks\ConsoleRedirection\bin\Debug\ConsoleRedirection.pdb
+C:\projects\au\csunit-github\mocks\ConsoleRedirection\obj\Debug\ConsoleRedirection.dll
+C:\projects\au\csunit-github\mocks\ConsoleRedirection\obj\Debug\ConsoleRedirection.pdb
+C:\projects\au\csunit-github\mocks\ConsoleRedirection\obj\Debug\Mock.ConsoleRedirection.csprojResolveAssemblyReference.cache

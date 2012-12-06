@@ -34,8 +34,8 @@ using System.Reflection;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("csUnit.Core.Tests")]
-[assembly: AssemblyDescription("Tests for csUnitCore")]
+[assembly: AssemblyTitle("Mock.ConsoleRedirection")]
+[assembly: AssemblyDescription("Assembly for testing csUnit")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("csunit.org")]
 [assembly: AssemblyProduct("csUnit")]
@@ -78,8 +78,6 @@ using System.Reflection;
 //       %Project Directory%\obj\<configuration>. For example, if your KeyFile is
 //       located in the project directory, you would specify the AssemblyKeyFile 
 //       attribute as [assembly: AssemblyKeyFile("..\\..\\mykey.snk")]
-//       [ml]: Attribute AssemblyKeyFile is obsolete as per VS2005. Instead it
-//       is a project setting (see there). [13Mar2005, ml]
 //   (*) Delay Signing is an advanced option - see the Microsoft .NET Framework
 //       documentation for more information on this.
 //
