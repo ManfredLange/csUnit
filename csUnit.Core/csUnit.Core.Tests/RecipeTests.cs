@@ -468,7 +468,9 @@ namespace csUnit.Core.Tests {
       public void CriterionAppliedWithMultipleAssemblies() {
          var recipe = RecipeFactory.NewRecipe("twoassemblies.deleteme.recipe");
          recipe.AddAssembly(_testDll);
-         recipe.AddAssembly("..\\..\\csUnit.CompatibilityTests\\NUnit-2.4.7\\bin\\Debug\\NUnit-2.4.7.dll");
+         var testDll = Path.Combine(Util.SolutionCodeBase,
+                                    "csUnit.CompatibilityTests\\NUnit-2.4.7\\bin\\Debug\\NUnit-2.4.7.dll");
+         recipe.AddAssembly(testDll);
          var listener = new SimpleRecipeListener(recipe);
 
          recipe.RunTests(new TestRun(new AllTestsCriterion()));
